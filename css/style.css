@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color-1: #ffffff;
+    --bg-color-2: #FFD433;
+    --bg-color-3: #FF90E8;
+    --padding: 1rem 4rem;
+    --font-family: monospace;
+    --step: 0.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e8e7f6;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+main h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 130px 0 20px;
+}
+
+main p {
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin-bottom: 70px;
+
+}
+
+
+.scallop-up {
+    height: 100px;
+    width: 100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#a5a0da), color-stop(0.49, #a5a0da), color-stop(0.51, #e8e7f6), to(#e8e7f6));
+    -webkit-background-size: 49px 100%;
+}
+
+.scallop-up-white {
+    height: 100px;
+    width: 100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#e8e7f6), color-stop(0.49, #e8e7f6), color-stop(0.51, #a5a0da), to(#a5a0da));
+    -webkit-background-size: 49px 100%;
+}
+
+
+/*   transform: translate3d(-0.5rem, -0.5rem, 0) */
+button:is(:hover, :focus-visible) {
+    --active: 1;
+}
+
+button {
+    --active: 0;
+    color: white;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-weight: bold;
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+
+button span:first-of-type {
+    padding: var(--padding);
+}
+
+button span:not(:first-of-type) {
+    position: absolute;
+}
+
+[aria-hidden] {
+    color: transparent;
+}
+
+button span {
+    inset: 0;
+    display: grid;
+    background: var(--bg);
+    place-items: center;
+    transition: 0.2s ease;
+    border: 2px solid black;
+    /*   transform:
+        translate(
+          calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1)),
+          calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
+        ); */
+    translate: calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1)) calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
+}
+
+span:nth-of-type(1) {
+    --bg: var(--bg-color-3);
+}
+
+span:nth-of-type(2) {
+    --coefficient: 1;
+    --bg: var(--bg-color-2);
+}
+
+span:nth-of-type(3) {
+    --coefficient: 2;
+    --bg: var(--bg-color-1);
+}
+
+button:active {
+    --active: 0.5;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    color: #b00000;
+}
+
+.gloss {
+    background-color: #A5A0DAFF;
+}
+
+.guide {
+    background-color: #E8E7F6FF;
+}
+
+.commandes {
+    background-color: #A5A0DAFF;
+}
+
+
+.bonnes {
+    background-color: #E8E7F6FF;
+}
+
+.gloss h3 {
+    font-size: 4rem;
+}
+.gloss h2 {
+    font-size: 200%;
+    text-align: center;
+}
+
+.gloss {text-align: center;
+padding-bottom: 50px}
+
+.margin-card {
+    margin: 0 30px 30px 30px;
+    max-height: 100%;
+}
+
+.margin-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.a-lms {
+    text-decoration: underline;
+    color: var(--bg-color-3);
+    transition: 300ms;
+}
+.a-lms:hover{
+    color: #b00000;
+}
+
+.commandes ul {
+    font-size: 1.3rem;
+    margin: 20px;
+}
+
+.bonnes {background-color: #e8e7f6}
