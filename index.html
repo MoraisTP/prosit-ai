@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!--    Metas-->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description"
+          content="Shogun.AI, le guide ultime pour comprendre à configurer et utiliser correctement le chatbot et LM Studio ! !">
+    <title>Shogun.AI : Le guide ultime ! !</title>
+    <meta content="all" name="robots"/>
+    <meta content="Re-style" property="og:title"/>
+    <meta content="Re-style : La boutique ultime de la deuxième main ! Donnez vie à vos vielles affaires..."
+          property="og:description"/>
+    <!--    Fin metas-->
+    <!--    Links-->
+    <script src="https://kit.fontawesome.com/26d2d5baaa.js" crossorigin="anonymous"></script>
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./css/style.css" rel="stylesheet">
+    <!--Fin Links-->
+</head>
+<body>
+<header>
+<nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="#" class="flex items-center">
+            <img src="./img/logo.png" class="h-6 mr-3 sm:h-9" alt="Logo">
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Shogun.AI</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+            <div class="hidden mt-2 mr-4 sm:inline-block">
+                <span></span>
+            </div>
+
+            <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="true">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd"></path>
+                </svg>
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                <li>
+                    <a href="./index.html"
+                       class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                       aria-current="page">Accueil</a>
+                </li>
+                <li>
+                    <a href="#glossaire"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Glossaire</a>
+                </li>
+                <li>
+                    <a href="#guide"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Guide</a>
+                </li>
+                <li>
+                    <a href="#commandes"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Commandes</a>
+                </li>
+                <li>
+                    <a href="#bonnes"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Bonnes pratiques</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+<main>
+    <section class="tete">
+        <h1>Shogun.AI : Le guide ultime !</h1>
+        <p>Vous avez une question, un doute ou vous voulez en apprendre plus ?
+            <br>Soyez le bienvenue dans ce guide complet sur : <span
+                    class="uppercase">comment utiliser LM Studio !</span>
+        </p>
+        <div class="container">
+            <a href="#glossaire">
+                <button>
+                    <span aria-hidden="true">Glossaire</span>
+                    <span></span>
+                    <span>Glossaire</span>
+                </button>
+            </a>
+            <a href="#guides">
+                <button>
+                    <span aria-hidden="true">Guide</span>
+                    <span></span>
+                    <span>Guide</span>
+                </button>
+            </a>
+            <a href="#commandes">
+                <button>
+                    <span aria-hidden="true">Commandes</span>
+                    <span></span>
+                    <span>Commandes</span>
+                </button>
+            </a>
+            <a href="#bonnes">
+                <button>
+                    <span aria-hidden="true">Bonnes pratiques !</span>
+                    <span></span>
+                    <span>Bonnes Pratiques !</span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section id="glossaire" class="gloss">
+        <div class="scallop-up"></div>
+        <div class="min-h-screen ">
+            <div class="margin-card">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-white mb-4">Glossaire</h1>
+                    <p class="text-xl text-white mb-8">Toutes les définitions à un seul endroit ! Aprrondir ses
+                        connaisances n'a jamais était aussi facile !
+
+                    </p>
+                    <a href="#"
+                       class="bg-white text-purple-900 py-2 px-4 rounded-full hover:bg-indigo-500 hover:text-white transition duration-300 ease-in-out">Voir
+                        plus...
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 margin-top">
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">AI :
+                        </h2>
+                        <p class="text-gray-700">L’intelligence artificielle représente tout outil utilisé par une
+                            machine afin de « reproduire des comportements liés aux humains, tels que le raisonnement,
+                            la planification et la créativité » Elle vise à résoudre des problèmes à forte complexité
+                            logique ou algorithmique.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Intelligence_artificielle">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">AI générative : </h2>
+                        <p class="text-gray-700">L'intelligence artificielle générative ou IA générative (IAg ou GenAI)
+                            est un type de système d'intelligence artificielle (IA) capable de générer du texte, des
+                            images, des vidéos ou d'autres médias en réponse à des requêtes (aussi appelées invités, ou
+                            en anglais prompts)
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Intelligence_artificielle_g%C3%A9n%C3%A9rative">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">LLM</h2>
+                        <p class="text-gray-700">Un grand modèle de langage [(ou grand modèle linguistique, grand modèle
+                            de langue, modèle de langage de grande taille ou encore modèle massif de langage) (abrégé
+                            LLM de l'anglais large language model)] est un modèle de langage possédant un grand nombre
+                            de paramètres (généralement de l'ordre d'un milliard ou plus).
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">NLP</h2>
+                        <p class="text-gray-700">Le traitement automatique des langues (TAL ou TALN), en anglais natural
+                            language processing ou NLP, est un domaine multidisciplinaire impliquant la linguistique,
+                            l'informatique et l'intelligence artificielle, qui vise à créer des outils de traitement du
+                            langage naturel pour diverses applications. Il ne doit pas être confondu avec la
+                            linguistique informatique, qui vise à comprendre les langues au moyen d'outils
+                            informatiques.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Traitement_automatique_des_langues">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">Mistral AI</h2>
+                        <p class="text-gray-700">est une entreprise française fondée en avril 2023, spécialisée dans
+                            l'intelligence artificielle générative. Elle développe des grands modèles de langages open
+                            source et propriétaires. Elle est cofondée par Arthur Mensch, Guillaume Lample et Timothée
+                            Lacroix.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Mistral_AI">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">LLaMA</h2>
+                        <p class="text-gray-700">(Large Language Model Meta AI) est un grand modèle linguistique
+                            développé par Meta et rendu publiquement accessible. Deux autres versions du modèle plus
+                            spécifiques, optimisées à partir de LLaMA, ont également été publiées par Meta : un agent
+                            conversationnel, appelé Llama Chat, et un assistant de programmation, Code Llama. D'autres
+                            modèles de langage comme Alpaca ont également vu le jour en entrainant les poids de Llama
+                            sur de nouvelles données.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/LLaMA">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">Falcon 180B</h2>
+                        <p class="text-gray-700">est un grand modèle de langage (LLM) développé par le Technology
+                            Innovation Institute (TII) des Émirats arabes unis, basé à Abu Dhabi. En 2023, c'est le plus
+                            grand modèle de langage ouvert, avec 180 milliards de paramètres et entraîné sur un corpus
+                            de 3,5 trillions de jetons (tokens) provenant du jeu de données RefinedWeb, disponible au
+                            public à l'automne 2023. Falcon 180B utilise une architecture basée sur l'attention
+                            multi-requêtes. Ceci permet au modèle d'effectuer plusieurs requêtes d'attention
+                            simultanément, ce qui réduit le coût computationnel et améliore la qualité des
+                            représentations.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Falcon_180B">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">Hugging Face</h2>
+                        <p class="text-gray-700">Hugging Face est une start-up (licorne) franco-américaine du domaine de
+                            l'Intelligence artificielle créée en 2016 et qui développe des outils pour utiliser
+                            l'apprentissage automatique. Elle propose notamment une bibliothèque, open source, de
+                            transformeurs conçue pour les applications de traitement automatique des langues, et une
+                            plate-forme permettant le partage des modèles et des ensembles de données nécessaires à
+                            l'apprentissage automatique, permettant notamment l'entraînement de nouveaux modèles, y
+                            compris de grands modèles.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Hugging_Face">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">Prompt</h2>
+                        <p class="text-gray-700">Le processus de structuration d'un prompt, de sorte qu'il soit
+                            efficacement interprété et compris par un modèle d'intelligence artificielle générative1,2.
+                            Un prompt (aussi appelé requête, ou invite de commande) est une description textuelle de la
+                            tâche qu’une IA doit effectuer. L'ingénierie de prompt est associée à la notion
+                            d'apprentissage en contexte (de l'anglais in-context learning), ce qui signifie la capacité
+                            d'un modèle à apprendre temporairement des informations à partir du prompt, c'est-à-dire du
+                            contexte.
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/Ing%C3%A9nierie_de_prompt">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">System Prompt</h2>
+                        <p class="text-gray-700">En IA, les jetons peuvent être considérés comme des morceaux de mots.
+                            Avant que l’API traite les instructions, l’entrée est décomposée en jetons. Ces jetons ne
+                            sont pas coupés exactement là où les mots commencent ou se terminent – les jetons peuvent
+                            inclure des espaces de fin et même des sous-mots. Lorsqu’un texte est « tokenisé », cela
+                            signifie qu’il est divisé en tokens individuels.
+                        </p>
+                        <a href="https://gptfrance.ai/les-tokens-jetons-en-ia-definition-fonctionnement-et-utilisation/">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">Méthode Feyman : </h2>
+                        <p class="text-gray-700">La technique Feynman est une méthode efficace pour apprendre de
+                            nouveaux concepts. Elle consiste à expliquer simplement les idées complexes. En enseignant
+                            un concept, vous vérifiez et renforcez votre compréhension. Cette méthode combat l’illusion
+                            de la connaissance en favorisant un apprentissage actif. En appliquant cette méthode, vous
+                            améliorez votre mémorisation et votre compréhension. C’est un outil puissant pour ceux qui
+                            étudient.
+                        </p>
+                        <a href="https://stewdy.com/strategies-dapprentissage/technique-feynman/#:~:text=La%20technique%20Feynman%20est%20une,en%20favorisant%20un%20apprentissage%20actif.">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 margin-top">
+                        <h2 class="text-xl font-bold text-purple-900 mb-4">LeetCode : </h2>
+                        <p class="text-gray-700">LeetCode est une plateforme en ligne de programmation, pour se préparer
+                            aux entretiens. Le service propose des problèmes de programmation et d'algorithmique
+                            destinés à ce que les utilisateurs s'entraînent au développement logiciel1. LeetCode a gagné
+                            en popularité parmi ceux en recherche d'emploi et les passionnés de programmation en tant
+                            que ressource pour les entretiens techniques et les concours de programmation
+                        </p>
+                        <a href="https://fr.wikipedia.org/wiki/LeetCode">
+                            <button>
+                                <span aria-hidden="true">En savoir plus...</span>
+                                <span></span>
+                                <span>En svoir plus...</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="guide" class="guide">
+        <div class="scallop-up-white"></div>
+        <section class="w-full mx-auto py-10 dark:bg-gray-900 dark:text-white">
+            <!-- Title -->
+            <div
+                    class="w-fit pb-1 px-2 mx-4 rounded-md text-2xl font-semibold border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
+                LM Studio, le guide.
+            </div>
+
+            <div class="w-full h-full flex flex-col items-center md:py-4 py-10">
+                <!-- Col - 2 -->
+                <div
+                        class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+                    <!--  -->
+                    <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="./img/lms1.jpg"
+                         alt="billboard image"/>
+
+                    <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+                        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">LM Studio est...</h2>
+                        <p class="text-md mt-4">LM Studio est un outil fonctionnant sous macOS, Windows et Linux qui
+                            permet très simplement de télécharger des LLMs (Large Language Models) et de les faire
+                            tourner en local. Ainsi vous pouvez discuter avec ces modèles via un chat comme vous le
+                            feriez avec ChatGPT.</p>
+                    </div>
+
+                </div>
+                <!-- Col - 3 -->
+                <div
+                        class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+                    <!--  -->
+                    <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+                        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Télécharger sur :</h2>
+
+                        <p class="text-md mt-4">Téléchargez <a class="a-lms" href="https://lmstudio.ai/">LM Studio</a>
+                            depuis leur site officiel ou via leur dépôt GitHub.
+                            Installez l’application sur votre PC, en suivant les instructions détaillées.
+                            Lancez l’application et naviguez à travers l’interface pour choisir le modèle de LLM qui
+                            correspond à vos besoins et à la capacité de votre machine.</p>
+                    </div>
+                    <!--  -->
+                    <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="./img/lms2.jpg" alt="Download LMS"/>
+
+                </div>
+                <div class="w-full h-full flex flex-col items-center md:py-4 py-10">
+                    <!-- Col - 2 -->
+                    <div
+                            class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+                        <!--  -->
+                        <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="./img/lms7.png"
+                             alt="billboard image"/>
+
+                        <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+                            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">La configuration !</h2>
+
+                            <p class="text-md mt-4">Après avoir installé le logiciel sur votre machine, lancez
+                                l'application et suivez ces étapes :
+                            <ol>
+                                <li>1 - Choissisez votre modèle en haut de l'écran</li>
+                                <li>2 - Si vous souhaitez Mistral, cliquer sur "Mistral AI"</li>
+                                <li>3 - Télécgarger votre modèle</li>
+                            <li>4 - Après le téléchargement, vous pouver "load" votre modèle</li>
+                                <li>5 - Lancez votre modèle grâce au bouton "Select a model"</li>
+                            </ol>
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- Col - 3 -->
+                    <div
+                            class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+                        <!--  -->
+                        <div class="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
+                            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Changez vos presets...</h2>
+                            <p class="text-md mt-4">Vous voulez pimpez votre IA à votre sauce ?
+                                LM Studio vous permets de changer les paramètres très facilement grâce au menu de droite
+                                (voir image).
+                                <br> Ce que vous pouvez changer :
+                            <ul>
+                                <li>System Prompt (Contexte global)</li>
+                                <li>Temperature (Créativité globale)</li>
+                                <li>Top K Top P ( Contrôle de la diversité des réponses.)</li>
+                                <li>Repeat Penalty(Réduction des répétitions)</li>
+                                <li>Min P Sampling'Exclusion des mots peu probables.)</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <!--  -->
+                        <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="./img/lms6.png"
+                             alt="Download LMS"/>
+
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- Photo by '@candjstudios' & '@framesforyourheart' on Unsplash -->
+
+    </section>
+    <section id="commandes" class="commandes">
+        <div class="scallop-up"></div>
+        <h1 class="text-4xl font-bold text-white mb-4">Commandes</h1>
+        <p class="text-xl text-white mb-8">Retrouvez les commandes les plus importantes de Shogun.AI !
+        </p>
+        <ul>
+            <li>/help Liste toutes les commandes, la commande ultime pour ceux qui sont perdus !</li>
+            <li>/learn Une commande pour déclancher les exercices en utilisant la méthode Feynman.
+            </li>
+            <li>/quiz : Générer des questions interactives pour s'auto-évaluer.
+            </li>
+            <li></li>
+            /challenge : Proposer des exercices pratiques et générer une roadmap concise et complète basée sur un sujet
+            ou un bloc de code.
+        </ul>  <div class="scallop-up-white"></div>
+    </section>
+    <section id="bonnes" class="bonnes">
+        <div>
+            <div
+                    class="w-fit mt-5 mr-5 pb-1 px-2 mx-4 rounded-md text-2xl font-semibold border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
+                Exemples de cas d’usage et bonnes pratiques pour LM Studio
+            </div>
+            <h2>
+            </h2>
+            <h3>Exemples de cas d’usage :
+            </h3>
+            <p><strong>Développement d’applications intelligentes ></strong> <br>
+
+                Contexte : Un développeur souhaite intégrer un assistant conversationnel dans une application pour
+                automatiser le support client.
+                Solution avec LM Studio : Configurer un modèle pour comprendre des questions fréquentes et répondre
+                automatiquement avec des réponses adaptées à une base de données client. </p>
+                <p><strong>Génération automatisée de code ></strong>
+
+                Contexte : Une équipe de développeurs veut accélérer le prototypage en générant du code pour des
+                structures ou des fonctionnalités communes. <br>
+                Solution avec LM Studio : Entraîner un modèle spécialisé sur des bases de données de code pour fournir
+                    des extraits personnalisés selon les besoins. </p>
+                <p><strong> Aide à la rédaction technique ></strong><br>
+
+                Contexte : Les rédacteurs techniques ont besoin d’assistance pour produire des documentations
+                techniques. <br>
+                Solution avec LM Studio : Créer un modèle spécialisé dans le langage technique de l’entreprise pour
+                rédiger ou compléter des documents techniques.</p>
+               <p> <strong> Optimisation de requêtes SQL ></strong><br>
+
+                Contexte : Les analystes de données cherchent à améliorer la performance de leurs requêtes complexes.
+                <br>
+                Solution avec LM Studio : Personnaliser un modèle pour analyser et optimiser automatiquement des
+                   requêtes SQL. </p>
+               <p> <strong> Formation et onboarding ><br></strong>
+
+                Contexte : Les nouveaux employés ont besoin d’accéder rapidement aux informations sur les outils
+                internes. <br>
+                Solution avec LM Studio : Mettre en place un assistant personnalisé pour répondre aux questions
+                fréquentes et guider les utilisateurs dans l’apprentissage des outils.</p>
+        </div>
+        <div><h3>Bonnes pratiques</h3>
+            <p><strong> Définir clairement les besoins avant de commencer</strong> <br>
+
+                Identifier les cas d’usage spécifiques et les objectifs du projet pour personnaliser efficacement le
+                modèle.
+            </p>
+                <p><strong> Utiliser des données pertinentes et de qualité </strong><br>
+
+                S’assurer que les données d’entraînement reflètent bien le contexte, le ton et les besoins pour éviter
+                des réponses inadéquates.
+                </p>
+               <p> <strong>Tester et itérer régulièrement </strong><br>
+
+                Effectuer des tests fréquents pour identifier les points d’amélioration et optimiser le modèle au fil du
+                temps.
+                </p>
+               <p><strong> Proposer une interface utilisateur claire et intuitive </strong><br>
+
+                Intégrer des messages de guidage pour que les utilisateurs finaux puissent interagir facilement avec
+                l’assistant.</p>
+
+               <p> <strong>Prévoir une supervision humaine </strong><br>
+
+                Pour des usages critiques, inclure un mécanisme pour valider les réponses générées avant de les
+                déployer.</p>
+
+              <p>  <strong> Maintenir et mettre à jour le modèle régulièrement </strong><br>
+
+                Réentraîner le modèle avec de nouvelles données pour refléter les évolutions des besoins ou du contexte.</p>
+
+              <p>  <strong>Mesurer les performances avec des KPIs adaptés </strong>
+
+                Utiliser des indicateurs tels que le taux de satisfaction utilisateur, le taux d’erreur ou la rapidité
+                des réponses pour évaluer le succès du modèle.
+                </p>
+               <p> <strong> Documenter les configurations et processus </strong> <br>
+
+                Fournir une documentation complète sur le modèle, y compris ses limites, pour faciliter son utilisation
+                et son adaptation.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="text-center bg-white pt-5">
+        <a href="#" class="flex items-center justify-center text-2xl font-semibold text-gray-900">
+            <img src="./img/logo.png" class="h-12 mr-3 sm:h-9" alt="Shogun Logo">
+            Shogun.AI
+        </a>
+
+        <span class="block text-sm text-center text-gray-500">© 2024 Shogun.AI. Tous droits réservés.
+
+	</span>
+
+        <ul class="flex justify-center space-x-5">
+            <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </li>
+
+    </div>
+</footer>
+<script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+<!--Script TailWind-->
+<script>var toggleOpen = document.getElementById('toggleOpen');
+var toggleClose = document.getElementById('toggleClose');
+var collapseMenu = document.getElementById('collapseMenu');
+
+function handleClick() {
+    if (collapseMenu.style.display === 'block') {
+        collapseMenu.style.display = 'none';
+    } else {
+        collapseMenu.style.display = 'block';
+    }
+}
+
+toggleOpen.addEventListener('click', handleClick);
+toggleClose.addEventListener('click', handleClick);</script>
+</body>
+</html>
