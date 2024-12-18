@@ -27,7 +27,7 @@ main h1 {
     font-size: 5rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    margin: 130px 0 20px;
+    margin: 130px 0 20px 0;
 }
 
 main p {
@@ -180,4 +180,35 @@ padding-bottom: 50px}
     margin: 20px;
 }
 
-.bonnes {background-color: #e8e7f6}
+.bonnes {
+    background-color: #e8e7f6;
+    margin-left: 40px;
+}
+
+.bonnes h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 10px;
+}
+
+.bonnes h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 30px;
+}
+
+.bonnes p {
+    font-size: 1.5rem;
+    margin: 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .tete h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        flex-direction: column
+    }
+}

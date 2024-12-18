@@ -20,50 +20,61 @@
 </head>
 <body>
 <header>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./img/logo.png" class="h-8" alt="Logo"/>
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Shogun.AI</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Ouvrir menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                     viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M1 1h15M1 7h15M1 13h15"/>
+<nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="#" class="flex items-center">
+            <img src="./img/logo.png" class="h-6 mr-3 sm:h-9" alt="Logo">
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Shogun.AI</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+            <div class="hidden mt-2 mr-4 sm:inline-block">
+                <span></span>
+            </div>
+
+            <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="true">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd"></path>
+                </svg>
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="#"
-                           class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                           aria-current="page">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="#glossaire"
-                           class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Glossaire</a>
-                    </li>
-                    <li>
-                        <a href="#guide"
-                           class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Guide</a>
-                    </li>
-                    <li>
-                        <a href="#commandes"
-                           class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Commandes</a>
-                    </li>
-                    <li>
-                        <a href="#bonnes"
-                           class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Bonnes
-                            pratiques</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </nav>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                <li>
+                    <a href="./index.html"
+                       class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                       aria-current="page">Accueil</a>
+                </li>
+                <li>
+                    <a href="#glossaire"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Glossaire</a>
+                </li>
+                <li>
+                    <a href="#guide"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Guide</a>
+                </li>
+                <li>
+                    <a href="#commandes"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Commandes</a>
+                </li>
+                <li>
+                    <a href="#bonnes"
+                       class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Bonnes pratiques</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
 </header>
 <main>
     <section class="tete">
@@ -385,7 +396,7 @@
                                 <li>1 - Choissisez votre modèle en haut de l'écran</li>
                                 <li>2 - Si vous souhaitez Mistral, cliquer sur "Mistral AI"</li>
                                 <li>3 - Télécgarger votre modèle</li>
-                                <li>4 - le téléchargement, vous pouver "load" votre modèle</li>
+                            <li>4 - Après le téléchargement, vous pouver "load" votre modèle</li>
                                 <li>5 - Lancez votre modèle grâce au bouton "Select a model"</li>
                             </ol>
                             </p>
@@ -440,53 +451,114 @@
         </ul>  <div class="scallop-up-white"></div>
     </section>
     <section id="bonnes" class="bonnes">
-        <div class="scallop-up">
-            <div class="grid md:grid-cols-3 max-w-screen-lg mx-auto gap-10 mt-16 px-5">
-
-                <div class="flex gap-4 items-start flex-col">
-        <span class="text-[#A5A0DAFF] bg-[#e8e7f6] p-3 rounded-full">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                <path d="M9.96424 2.68571C10.0668 2.42931 9.94209 2.13833 9.6857 2.03577C9.4293 1.93322 9.13832 2.05792 9.03576 2.31432L5.03576 12.3143C4.9332 12.5707 5.05791 12.8617 5.3143 12.9642C5.5707 13.0668 5.86168 12.9421 5.96424 12.6857L9.96424 2.68571ZM3.85355 5.14646C4.04882 5.34172 4.04882 5.6583 3.85355 5.85356L2.20711 7.50001L3.85355 9.14646C4.04882 9.34172 4.04882 9.6583 3.85355 9.85356C3.65829 10.0488 3.34171 10.0488 3.14645 9.85356L1.14645 7.85356C0.951184 7.6583 0.951184 7.34172 1.14645 7.14646L3.14645 5.14646C3.34171 4.9512 3.65829 4.9512 3.85355 5.14646ZM11.1464 5.14646C11.3417 4.9512 11.6583 4.9512 11.8536 5.14646L13.8536 7.14646C14.0488 7.34172 14.0488 7.6583 13.8536 7.85356L11.8536 9.85356C11.6583 10.0488 11.3417 10.0488 11.1464 9.85356C10.9512 9.6583 10.9512 9.34172 11.1464 9.14646L12.7929 7.50001L11.1464 5.85356C10.9512 5.6583 10.9512 5.34172 11.1464 5.14646Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-        </span>
-                    <div>
-                        <h3 class="font-semibold text-xl">Guide de personnalisation</h3>
-                        <p class="mt-1 text-gray-500">Apprenez comment adapter l’assistant pour répondre aux besoins spécifiques de votre projet.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 items-start flex-col">
-        <span class="text-[#A5A0DAFF] bg-[#e8e7f6] p-3 rounded-full">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                <path d="M0.849976 1.74998C..." fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-        </span>
-                    <div>
-                        <h3 class="font-semibold text-xl">Exemples concrets</h3>
-                        <p class="mt-1 text-gray-500">Découvrez des exemples pratiques d’utilisation pour maximiser la productivité de vos développeurs.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 items-start flex-col">
-        <span class="text-[#A5A0DAFF] bg-[#e8e7f6] p-3 rounded-full">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                <path d="M7.28856 0.796908C..." fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-        </span>
-                    <div>
-                        <h3 class="font-semibold text-xl">Bonnes pratiques</h3>
-                        <p class="mt-1 text-gray-500">Suivez nos conseils pour implémenter et maintenir une structure robuste et optimisée.</p>
-                    </div>
-                </div>
-
+        <div>
+            <div
+                    class="w-fit mt-5 mr-5 pb-1 px-2 mx-4 rounded-md text-2xl font-semibold border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
+                Exemples de cas d’usage et bonnes pratiques pour LM Studio
             </div>
+            <h2>
+            </h2>
+            <h3>Exemples de cas d’usage :
+            </h3>
+            <p><strong>Développement d’applications intelligentes ></strong> <br>
 
+                Contexte : Un développeur souhaite intégrer un assistant conversationnel dans une application pour
+                automatiser le support client.
+                Solution avec LM Studio : Configurer un modèle pour comprendre des questions fréquentes et répondre
+                automatiquement avec des réponses adaptées à une base de données client. </p>
+                <p><strong>Génération automatisée de code ></strong>
+
+                Contexte : Une équipe de développeurs veut accélérer le prototypage en générant du code pour des
+                structures ou des fonctionnalités communes. <br>
+                Solution avec LM Studio : Entraîner un modèle spécialisé sur des bases de données de code pour fournir
+                    des extraits personnalisés selon les besoins. </p>
+                <p><strong> Aide à la rédaction technique ></strong><br>
+
+                Contexte : Les rédacteurs techniques ont besoin d’assistance pour produire des documentations
+                techniques. <br>
+                Solution avec LM Studio : Créer un modèle spécialisé dans le langage technique de l’entreprise pour
+                rédiger ou compléter des documents techniques.</p>
+               <p> <strong> Optimisation de requêtes SQL ></strong><br>
+
+                Contexte : Les analystes de données cherchent à améliorer la performance de leurs requêtes complexes.
+                <br>
+                Solution avec LM Studio : Personnaliser un modèle pour analyser et optimiser automatiquement des
+                   requêtes SQL. </p>
+               <p> <strong> Formation et onboarding ><br></strong>
+
+                Contexte : Les nouveaux employés ont besoin d’accéder rapidement aux informations sur les outils
+                internes. <br>
+                Solution avec LM Studio : Mettre en place un assistant personnalisé pour répondre aux questions
+                fréquentes et guider les utilisateurs dans l’apprentissage des outils.</p>
+        </div>
+        <div><h3>Bonnes pratiques</h3>
+            <p><strong> Définir clairement les besoins avant de commencer</strong> <br>
+
+                Identifier les cas d’usage spécifiques et les objectifs du projet pour personnaliser efficacement le
+                modèle.
+            </p>
+                <p><strong> Utiliser des données pertinentes et de qualité </strong><br>
+
+                S’assurer que les données d’entraînement reflètent bien le contexte, le ton et les besoins pour éviter
+                des réponses inadéquates.
+                </p>
+               <p> <strong>Tester et itérer régulièrement </strong><br>
+
+                Effectuer des tests fréquents pour identifier les points d’amélioration et optimiser le modèle au fil du
+                temps.
+                </p>
+               <p><strong> Proposer une interface utilisateur claire et intuitive </strong><br>
+
+                Intégrer des messages de guidage pour que les utilisateurs finaux puissent interagir facilement avec
+                l’assistant.</p>
+
+               <p> <strong>Prévoir une supervision humaine </strong><br>
+
+                Pour des usages critiques, inclure un mécanisme pour valider les réponses générées avant de les
+                déployer.</p>
+
+              <p>  <strong> Maintenir et mettre à jour le modèle régulièrement </strong><br>
+
+                Réentraîner le modèle avec de nouvelles données pour refléter les évolutions des besoins ou du contexte.</p>
+
+              <p>  <strong>Mesurer les performances avec des KPIs adaptés </strong>
+
+                Utiliser des indicateurs tels que le taux de satisfaction utilisateur, le taux d’erreur ou la rapidité
+                des réponses pour évaluer le succès du modèle.
+                </p>
+               <p> <strong> Documenter les configurations et processus </strong> <br>
+
+                Fournir une documentation complète sur le modèle, y compris ses limites, pour faciliter son utilisation
+                et son adaptation.</p>
         </div>
     </section>
 </main>
 <footer>
+    <div class="text-center bg-white pt-5">
+        <a href="#" class="flex items-center justify-center text-2xl font-semibold text-gray-900">
+            <img src="./img/logo.png" class="h-12 mr-3 sm:h-9" alt="Shogun Logo">
+            Shogun.AI
+        </a>
 
+        <span class="block text-sm text-center text-gray-500">© 2024 Shogun.AI. Tous droits réservés.
+
+	</span>
+
+        <ul class="flex justify-center space-x-5">
+            <li>
+                <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </li>
+
+    </div>
 </footer>
+<script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
