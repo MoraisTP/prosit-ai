@@ -11,12 +11,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #e8e7f6;
+    overflow-x: hidden;
 }
 
 p {
@@ -120,6 +122,15 @@ button:active {
 .container {
     display: flex;
     justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.container button {
+    min-width: 260px;
+    min-height: auto;
+
 }
 
 .uppercase {
@@ -208,7 +219,7 @@ padding-bottom: 50px}
         font-size: 2rem;
     }
 
-    .container {
-        flex-direction: column
-    }
+    /*.container {*/
+    /*    flex-direction: column*/
+    /*}*/
 }
